@@ -1,0 +1,1 @@
+#images{padding-bottom:94px}@media screen and (max-width: 1279px){#images{display:none}}.images__image{width:370px;height:294px}.images__list{display:flex;width:100%}.images__listitem{width:calc((100% - 60px)/3)}.images__listitem:not(:last-child){margin-right:30px}@media screen and (max-width: 1280px){.images .title{display:none}.images #images{padding:0%}}

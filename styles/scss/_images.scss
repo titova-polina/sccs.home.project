@@ -1,0 +1,42 @@
+#images {
+  padding-bottom: 94px;
+  @extend %container;
+
+  & .title {
+    @extend %title;
+  }
+
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+}
+
+.images {
+  &__image {
+    width: 370px;
+    height: 294px;
+    border-radius: 4px;
+  }
+
+  &__list {
+    display: flex;
+    width: 100%;
+
+    &item {
+      width: calc((100% - 2 * 30px) / 3);
+    }
+
+    &item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .title {
+      display: none;
+    }
+    #images {
+      padding: 0%;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.burger {
+  width: 40px;
+  height: 40px;
+  padding: 12px 8px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+
+  &-mobile {
+    position: absolute;
+    top: 21px;
+    right: 24px;
+  }
+
+  &__line {
+    width: 100%;
+    height: 100%;
+    background: black;
+    transition: background $transition-quick;
+  }
+
+  &__cross {
+    width: 20px;
+    height: 2px;
+    background: black;
+
+    &:first-child {
+      transform: translateY(3px) rotate(45deg);
+    }
+
+    &:last-child {
+      transform: translateY(-3px) rotate(-45deg);
+    }
+  }
+
+  &:hover > &__line,
+  &:focus > &__line {
+    background: $blue-color;
+  }
+
+  &:hover > &__cross,
+  &:focus > &__cross {
+    background: $blue-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
