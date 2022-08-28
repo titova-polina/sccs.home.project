@@ -24,11 +24,16 @@
   &__content {
     position: relative;
     background-color: #fff;
-    width: 528px;
-    height: 581px;
+    width: calc(100% - 30px);
+    max-width: 450px;
+    max-height: calc(100vh - 30px);
+    overflow: auto;
     padding: 40px;
     transform: scaleX(-2);
     transition: transform 500ms ease-in;
+    @media screen and (min-width: 1280px) {
+      max-width: 528px;
+    }
   }
 
   &__text {
@@ -133,7 +138,7 @@
   }
 
   &-button {
-    position: absolute;
+    display: block;
     left: 190px;
     font-weight: 700;
     font-size: 16px;
@@ -143,7 +148,7 @@
     border-radius: 4px;
     border: none;
     padding: 10px 32px;
-    margin-top: 50px;
+    margin: 30px auto 0;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     letter-spacing: 0.06em;

@@ -1,5 +1,8 @@
 .permanent {
   @extend %title;
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+  }
 }
 
 #client {
@@ -65,29 +68,29 @@
     }
 
     @media screen and (min-width: 768px) {
-      &__client {
+      & {
         width: calc((100% - 2 * 30px) / 3);
       }
-      &__client:nth-child(n) {
+      &:nth-child(n) {
         margin-right: 30px;
       }
-      &__client:nth-child(3n) {
+      &:nth-child(3n) {
         margin-right: 0;
       }
-      &__client:nth-child(4) {
+      &:nth-child(4) {
         margin-bottom: 0;
       }
     }
 
     @media screen and (min-width: 1280px) {
-      &__client {
+      & {
         width: calc((100% - 5 * 30px) / 6);
       }
-      &__client:nth-child(n) {
+      &:nth-child(n) {
         margin-right: 30px;
         margin-bottom: 0;
       }
-      &__client:last-child {
+      &:last-child {
         margin-right: 0;
       }
     }
